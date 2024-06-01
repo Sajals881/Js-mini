@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-blue-900">
+    <div
+      class="input-box bg-white w-[90%] max-w-[500px] rounded-md py-[10px] px-[20px] my-[300px] mx-[auto] flex items-center"
+    >
+      <input
+        type="password"
+        id="password"
+        class="w-[100%] py-[10px] px-0 border-0 outline-0 text-black text-2xl"
+        placeholder="password"
+      />
+      <img src="eye-close.png" id="eyeicon" class="w-[35px] cursor-pointer" />
+    </div>
+    <script>
+      let eyeicon = document.querySelector("#eyeicon");
+      let password = document.querySelector("#password");
+
+      eyeicon.onclick = function () {
+        if (password.type == "password") {
+          password.type = "text";
+          eyeicon.src = "eye-open.png";
+        } else {
+          password.type = "password";
+          eyeicon.src = "eye-close.png";
+        }
+      };
+    </script>
+  </body>
+</html>
